@@ -1,0 +1,22 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React practice",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/premkumar2002/react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Prem Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/premkumar2002/react/issues"
+  },
+  "homepage": "https://github.com/premkumar2002/react#readme"
+}
