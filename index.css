@@ -1,0 +1,127 @@
+body {
+    background-color: #edcb09;
+}
+.header {
+    background-color: #282c34; /* Dark background for the header */
+    color: #ffffff;            /* White text */
+    display: flex;             /* Flexbox layout for alignment */
+    justify-content: space-between; /* Spread out logo and nav */
+    align-items: center;       /* Vertically center logo and nav */
+    position: sticky;          /* Stick the header to the top on scroll */
+    top: 0;
+    z-index: 1000;             /* Ensure the header stays on top of other elements */
+   border: 1px solid red;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;   
+}
+.navitems {
+    padding: 0px 20px;
+    list-style: none;           /* Remove default bullet points */
+    display: flex;              /* Arrange links horizontally */
+    gap: 30px;                  /* Space between nav items */
+    margin: 0;                  /* Remove default margin */
+    padding: 0;                 /* Remove default padding */
+}
+.navitems > ul {
+    font-size: 25px;
+    display: flex;
+    list-style: none;
+}
+.navitems > ul > li {
+    padding: 10px;
+    margin: 10px;
+}
+/* Container for restaurant cards */
+.res-container {
+    display: flex;                   /* Use flexbox to arrange items */
+    flex-wrap: wrap;                 /* Allow wrapping to new rows */
+    justify-content: space-around;   /* Space out the cards evenly */
+    gap: 5px;                       /* Space between the cards */
+    padding: 5px;                   /* Padding around the container */
+}
+
+.res-card {
+    flex: 1 1 200px;
+    background-color: #fff;            /* White background for the card */
+    border-radius: 8px;                /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 7px;                      /* Padding inside the card */
+    max-width: 200px;                  /* Set a max width to the card */
+    margin: 20px auto;                 /* Center the card and add spacing */
+    text-align: center;                /* Center the text inside the card */
+    transition: transform 0.3s ease, border 0.3s ease;  /* Smooth hover effect for both transform and border */
+    border: 2px solid transparent;     /* Start with no visible border */
+}
+
+.res-card:hover {
+    transform: scale(1.05);            /* Slight scaling effect on hover */
+    border: 2px solid #000000;         /* Add a thin blue border on hover */
+    cursor: pointer;  
+}
+
+.res-card h3 {
+    font-size: 1.5rem;                 /* Larger font for the restaurant name */
+    color: #333;                       /* Dark color for the text */
+    margin-bottom: 10px;               /* Space below the heading */
+    margin-top: 0px;
+    font-weight: 600;                  /* Bold heading */
+}
+
+.res-logo {
+    width: 200px;
+    height: 170px;
+    border-radius: 8px;  
+}
+
+.res-card h5 {
+    font-size: 1rem;                 /* Set font size for h5 */
+    margin: 5px 0;                   /* Reduce top and bottom margin */
+    font-weight: normal;             /* Optional: Set normal weight to match style */
+    line-height: 1.1;                /* Adjust line height for readability */
+}
+
+
+/* Styling for the search container */
+.filter {
+    display: flex;                    /* Flexbox to arrange input and button */
+    justify-content: center;          /* Center the search input and button */
+    margin: 20px auto;                /* Center align the container and add margin */
+    width: 100%;                      /* Full width */
+    max-width: 600px;                 /* Limit the width for larger screens */
+}
+
+/* Styling for the search input */
+.search-input {
+    width: 80%;                       /* Input field takes up 80% of the space */
+    padding: 10px;                    /* Padding inside the input field */
+    border: 2px solid #ccc;           /* Light border around input */
+    border-radius: 4px;               /* Slightly rounded corners */
+    font-size: 1rem;                  /* Set font size for readability */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+/* Styling for the search button */
+.filter-btn {
+    padding: 10px 20px;               /* Padding around the button */
+    margin-left: 10px;                /* Space between input and button */
+    background-color: #174af4;        /* Button background color */
+    border: none;                     /* Remove border */
+    color: white;                     /* Button text color */
+    font-size: 1rem;                  /* Font size for readability */
+    border-radius: 4px;               /* Rounded corners */
+    cursor: pointer;                  /* Pointer cursor to indicate clickability */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the button */
+.filter-btn:hover {
+    background-color: #21a1f1;        /* Darker blue on hover */
+}
+
+/* Focus effect for the input field */
+.search-input:focus {
+    border-color: #61dafb;            /* Change border color on focus */
+    outline: none;                    /* Remove default focus outline */
+}
