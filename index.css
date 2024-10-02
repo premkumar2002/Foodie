@@ -1,5 +1,5 @@
 body {
-    background-color: #edcb09;
+    background-color: #e5c914;
 }
 .header {
     background-color: #282c34; /* Dark background for the header */
@@ -23,6 +23,7 @@ body {
     gap: 30px;                  /* Space between nav items */
     margin: 0;                  /* Remove default margin */
     padding: 0;                 /* Remove default padding */
+    cursor: pointer;
 }
 .navitems > ul {
     font-size: 25px;
@@ -82,46 +83,90 @@ body {
     line-height: 1.1;                /* Adjust line height for readability */
 }
 
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .shimmer-card {
+    width: 250px;
+    height: 300px;
+    background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 20%, #f0f0f0 40%, #f0f0f0 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 8px;
+  }
 
-/* Styling for the search container */
-.filter {
-    display: flex;                    /* Flexbox to arrange input and button */
-    justify-content: center;          /* Center the search input and button */
-    margin: 20px auto;                /* Center align the container and add margin */
-    width: 100%;                      /* Full width */
-    max-width: 600px;                 /* Limit the width for larger screens */
+  .login {
+    background-color: #4CAF50;
+    color: white;
+    border: none; 
+    padding: 0px 20px; /* Top and bottom padding, left and right padding */
+    text-align: center; /* Centered text */
+    display: inline-block; /* Allows setting width and height */
+    font-size: 20px; /* Font size */
+    margin-left: 15px; /* Space between the button and the list items */
+    margin-right: 9px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
 }
 
-/* Styling for the search input */
-.search-input {
-    width: 80%;                       /* Input field takes up 80% of the space */
-    padding: 10px;                    /* Padding inside the input field */
-    border: 2px solid #ccc;           /* Light border around input */
-    border-radius: 4px;               /* Slightly rounded corners */
-    font-size: 1rem;                  /* Set font size for readability */
-    transition: border-color 0.3s ease; /* Smooth transition on focus */
+.login:hover {
+    background-color: #21ac28; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+.logout {
+    background-color: #f44336; /* Red background for Logout */
 }
 
-/* Styling for the search button */
+.logout:hover {
+    background-color: #e53935; /* Darker red on hover for Logout */
+}
+
+.search {
+    display: flex; /* Aligns children in a row */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 20px; /* Space below the search bar */
+}
+
+.search input {
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    width: 200px; /* Fixed width for the input */
+    font-size: 16px; /* Font size for better readability */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.search input:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none; /* Remove default outline */
+}
+
 .filter-btn {
-    padding: 10px 20px;               /* Padding around the button */
-    margin-left: 10px;                /* Space between input and button */
-    background-color: #174af4;        /* Button background color */
-    border: none;                     /* Remove border */
-    color: white;                     /* Button text color */
-    font-size: 1rem;                  /* Font size for readability */
-    border-radius: 4px;               /* Rounded corners */
-    cursor: pointer;                  /* Pointer cursor to indicate clickability */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    background-color: #4594cd; /* Green background for buttons */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding inside the button */
+    font-size: 16px; /* Font size for better readability */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
 }
 
-/* Hover effect for the button */
 .filter-btn:hover {
-    background-color: #21a1f1;        /* Darker blue on hover */
+    background-color: #2356ba; /* Darker green on hover */
 }
 
-/* Focus effect for the input field */
-.search-input:focus {
-    border-color: #61dafb;            /* Change border color on focus */
-    outline: none;                    /* Remove default focus outline */
+.filter-btn:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.filter{
+    display: flex;
 }
