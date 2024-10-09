@@ -11,10 +11,24 @@ body {
     top: 0;
     z-index: 1000;             /* Ensure the header stays on top of other elements */
    border: 1px solid red;
+   border-radius: 20px;
 }
 .logo{
     width: 100px;
     cursor: pointer;   
+}
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+}
+.logo-container > h1{
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 35px;
+    font-family: "Louize-Regular-205TF", sans-serif;
+    font-weight: 500;
+    font-variation-settings: inherit;
+    font-style: normal;
 }
 .navitems {
     padding: 0px 20px;
@@ -29,10 +43,12 @@ body {
     font-size: 25px;
     display: flex;
     list-style: none;
+    color: white;
 }
 .navitems > ul > li {
     padding: 10px;
     margin: 10px;
+    color: white;
 }
 /* Container for restaurant cards */
 .res-container {
@@ -138,9 +154,10 @@ body {
     padding: 10px; /* Padding inside the input */
     border: 1px solid #ccc; /* Light gray border */
     border-radius: 5px; /* Rounded corners */
-    width: 200px; /* Fixed width for the input */
+    width: 300px; /* Fixed width for the input */
     font-size: 16px; /* Font size for better readability */
     margin-right: 10px; /* Space between input and button */
+    
 }
 
 .search input:focus {
@@ -169,4 +186,6 @@ body {
 
 .filter{
     display: flex;
+    padding-left: 500px;
+    padding-top: 30px;
 }
