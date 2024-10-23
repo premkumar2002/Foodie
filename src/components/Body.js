@@ -1,6 +1,7 @@
 import RestaurantCard from "./Restaurantcard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
@@ -29,17 +30,17 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter">
-        <div className="search">
+    <div className="bg-yellow-200">
+      <div className="content-center flex flex-col items-center">
+        <div className="search m-4 p2 ">
           <input 
             type="text" 
             placeholder="search" 
-            className="search-box"
+            className="border border-solid border-black rounded-lg w-56 p-2"
             value = {searchText} onChange={(e) => {setSearchText(e.target.value)}}
           />
           <button 
-            className="filter-btn"
+            className="mx-4 px-2 py-1 border border-solid border-yellow-300 bg-yellow-500 rounded"
             onClick={() => {
               const filteredres = listOfRestaurants.filter(
                 (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -50,15 +51,16 @@ const Body = () => {
           >Search</button>
         </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filtlistOfRestaurants.map((restaurant) => {
           // Check if restaurant and its info exist
           if (restaurant?.info && restaurant.info.id) {
             return (
-              <RestaurantCard
+              <Link to={"/restaurants/" + restaurant.info.id}><RestaurantCard
                 key={restaurant.info.id}
                 resData={restaurant.info}
               />
+              </Link>
             );
           }
           return null; // Skip the undefined or incorrect data
