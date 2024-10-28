@@ -14,106 +14,65 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send data to an API)
     console.log('Form submitted:', formData);
-    // Reset form after submission
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.header}>Contact Us</h2>
-      <p style={styles.paragraph}>
-        We would love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out using the form below.
-      </p>
-      
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <div style={styles.formGroup}>
-          <label style={styles.label}>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            style={styles.input}
-          />
-        </div>
+    <div className="bg-gray-100 py-12 px-6 md:px-12">
+      <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">Contact Us</h2>
+        <p className="text-center text-lg text-gray-700 mb-8">
+          We would love to hear from you! Fill out the form below, and our team will get back to you.
+        </p>
+        
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block text-gray-700 font-semibold mb-2">Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg"
+            />
+          </div>
 
-        <div style={styles.formGroup}>
-          <label style={styles.label}>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            style={styles.input}
-          />
-        </div>
+          <div>
+            <label className="block text-gray-700 font-semibold mb-2">Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-gray-300 rounded-lg"
+            />
+          </div>
 
-        <div style={styles.formGroup}>
-          <label style={styles.label}>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows="4"
-            style={styles.textarea}
-          />
-        </div>
+          <div>
+            <label className="block text-gray-700 font-semibold mb-2">Message:</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows="4"
+              className="w-full p-3 border border-gray-300 rounded-lg"
+            ></textarea>
+          </div>
 
-        <button type="submit" style={styles.button}>Send Message</button>
-      </form>
+          <button
+            type="submit"
+            className="w-full bg-blue-700 text-white p-3 rounded-lg font-semibold hover:bg-blue-800"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    padding: '20px',
-    maxWidth: '600px',
-    margin: 'auto',
-    fontFamily: 'Arial, sans-serif',
-  },
-  header: {
-    textAlign: 'center',
-    fontSize: '2em',
-    marginBottom: '20px',
-  },
-  paragraph: {
-    lineHeight: '1.6',
-    marginBottom: '20px',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  formGroup: {
-    marginBottom: '15px',
-  },
-  label: {
-    marginBottom: '5px',
-  },
-  input: {
-    padding: '10px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-  },
-  textarea: {
-    padding: '10px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-  },
-  button: {
-    padding: '10px',
-    backgroundColor: '#28a745',
-    color: '#fff',
-    borderRadius: '5px',
-    border: 'none',
-    cursor: 'pointer',
-  },
 };
 
 export default ContactUs;

@@ -36,3 +36,14 @@
 - hook 1 - useState() ->Superpowrful state variable in react
 - hook 2 - useEffect() -> 
 
+
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect our store to our app
+- slice(cartSlice)
+- Dispatch(action)
+- selector
+
+# testing
+- Unit, Integration, End to End testings

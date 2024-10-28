@@ -7,7 +7,7 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [filtlistOfRestaurants, setfiltListOfRestaurant] = useState([]);
   
-  const [searchText, setSearchText] = useState("")
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchData();
   }, []);
@@ -26,21 +26,21 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  console.log(listOfRestaurants);
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="bg-yellow-200">
-      <div className="content-center flex flex-col items-center">
-        <div className="search m-4 p2 ">
+    <div className="bg-gradient-to-br from-yellow-200 via-yellow-100 to-yellow-200 min-h-screen py-10">
+      <div className="flex flex-col items-center">
+        <div className="search flex items-center gap-4 mb-8">
           <input 
             type="text" 
-            placeholder="search" 
-            className="border border-solid border-black rounded-lg w-56 p-2"
-            value = {searchText} onChange={(e) => {setSearchText(e.target.value)}}
+            placeholder="Search restaurants..." 
+            className="border border-gray-300 rounded-lg w-64 p-3 shadow-sm focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+            value={searchText} 
+            onChange={(e) => setSearchText(e.target.value)}
           />
           <button 
-            className="mx-4 px-2 py-1 border border-solid border-yellow-300 bg-yellow-500 rounded"
+            className="px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition ease-in-out duration-150"
             onClick={() => {
               const filteredres = listOfRestaurants.filter(
                 (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -48,18 +48,18 @@ const Body = () => {
 
               setfiltListOfRestaurant(filteredres);
             }}
-          >Search</button>
+          >
+            Search
+          </button>
         </div>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap gap-6 justify-center p-4">
         {filtlistOfRestaurants.map((restaurant) => {
           // Check if restaurant and its info exist
           if (restaurant?.info && restaurant.info.id) {
             return (
-              <Link to={"/restaurants/" + restaurant.info.id}><RestaurantCard
-                key={restaurant.info.id}
-                resData={restaurant.info}
-              />
+              <Link to={`/restaurants/${restaurant.info.id}`} key={restaurant.info.id}>
+                <RestaurantCard resData={restaurant.info} />
               </Link>
             );
           }
