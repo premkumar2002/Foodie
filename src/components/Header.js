@@ -2,6 +2,7 @@ import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import React from "react";
 
 const Header = () => {
     const [isLoggedIn, setLoggedIn] = useState(false);

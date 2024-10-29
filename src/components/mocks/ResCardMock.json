@@ -1,0 +1,81 @@
+{
+    "id": "249719",
+    "name": "LunchBox - Meals and Thalis",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/16/83765471-1847-4538-a569-2d68d24ce699_249719.jpg",
+    "locality": "Tulasi theater",
+    "areaName": "Marathahalli",
+    "costForTwo": "₹200 for two",
+    "cuisines": [
+        "Biryani",
+        "North Indian",
+        "Punjabi",
+        "Healthy Food",
+        "Desserts",
+        "Beverages"
+    ],
+    "avgRating": 4.3,
+    "parentId": "4925",
+    "avgRatingString": "4.3",
+    "totalRatingsString": "1.6K+",
+    "sla": {
+        "deliveryTime": 29,
+        "lastMileTravel": 0.6,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 mins",
+        "lastMileTravelString": "0.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2024-10-29 23:59:00",
+        "opened": true
+    },
+    "badges": {
+        "textExtendedBadges": [
+            {
+                "iconId": "guiltfree/GF_Logo_android_3x",
+                "shortDescription": "options available",
+                "fontColor": "#7E808C"
+            }
+        ]
+    },
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+        "entityBadges": {
+            "imageBased": {},
+            "textBased": {},
+            "textExtendedBadges": {
+                "badgeObject": [
+                    {
+                        "attributes": {
+                            "description": "",
+                            "fontColor": "#7E808C",
+                            "iconId": "guiltfree/GF_Logo_android_3x",
+                            "shortDescription": "options available"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "aggregatedDiscountInfoV3": {
+        "header": "ITEMS",
+        "subHeader": "AT ₹159"
+    },
+    "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+            "lottie": {},
+            "video": {}
+        }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "--"
+        }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+}
